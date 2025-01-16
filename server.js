@@ -8,7 +8,7 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { GoogleAIFileManager } = require("@google/generative-ai/server");
 
 const app = express();
-const PORT = 5000;
+const PORT = 8083;
 
 // Set up multer to store files temporarily
 const upload = multer({ dest: "uploads/" });
