@@ -21,13 +21,10 @@ const fileManager = new GoogleAIFileManager(apiKey);
 const corsOptions = {
     origin: ['http://localhost:3000','https://geminisai1.netlify.app'], // Allow requests only from these two origins
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Allowed HTTP methods
-    credentials: true // Allow credentials (e.g., cookies, authorization headers)
+    credentials: true ,// Allow credentials (e.g., cookies, authorization headers)
+    allowedHeaders:"*"
 };
-// const corsOptions = {
-//     origin: '*', // Allow requests from any origin
-//     methods: ['GET', 'POST','PUT','PATCH','DELETE'],
-//     credentials: true
-// };
+
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
