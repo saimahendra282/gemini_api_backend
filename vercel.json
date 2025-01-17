@@ -7,9 +7,15 @@
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      }
+        {
+            "src": "/(.*)",
+            "dest": "/",
+            "methods": ["GET", "POST"],
+            "headers": {
+                "Access-Control-Allow-Origin": "http://localhost:3000, https://geminisai1.netlify.app",
+                "Access-Control-Allow-Methods": "GET, POST",
+                "Access-Control-Allow-Headers": "*"
+            }
+        }
     ]
   }
